@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Twitter -->
+    <meta name="twitter:site" content="@themepixels">
+    <meta name="twitter:creator" content="@themepixels">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Slim">
+    <meta name="twitter:description" content="Premium Quality and Responsive UI for Dashboard.">
+    <meta name="twitter:image" content="http://themepixels.me/slim/img/slim-social.png">
+
+    <!-- Facebook -->
+    <meta property="og:url" content="http://themepixels.me/slim">
+    <meta property="og:title" content="Slim">
+    <meta property="og:description" content="Premium Quality and Responsive UI for Dashboard.">
+
+    <meta property="og:image" content="http://themepixels.me/slim/img/slim-social.png">
+    <meta property="og:image:secure_url" content="http://themepixels.me/slim/img/slim-social.png">
+    <meta property="og:image:type" content="image/png">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="600">
+
+    <!-- Meta -->
+    <meta name="description" content="Premium Quality and Responsive UI for Dashboard.">
+    <meta name="author" content="ThemePixels">
+
+    <title>Slim Responsive Bootstrap 4 Admin Template</title>
+
+    <!-- vendor css -->
+    <link href="../lib/font-awesome/css/font-awesome.css" rel="stylesheet">
+    <link href="../lib/Ionicons/css/ionicons.css" rel="stylesheet">
+    <link href="../lib/jquery-toggles/css/toggles-full.css" rel="stylesheet">
+    <link href="../lib/jt.timepicker/css/jquery.timepicker.css" rel="stylesheet">
+    <link href="../lib/spectrum/css/spectrum.css" rel="stylesheet">
+    <link href="../lib/bootstrap-tagsinput/css/bootstrap-tagsinput.css" rel="stylesheet">
+
+    <!-- Slim CSS -->
+    <link rel="stylesheet" href="../css/slim.css">
+
+  </head>
+  <body>
+      <div class="slim-header">
+          <div class="container">
+            <div class="slim-header-left">
+              <h2 class="slim-logo"><a href="index.html">slim<span>.</span></a></h2>
+    
+            </div><!-- slim-header-left -->
+            <div class="slim-header-right">
+              <div class="dropdown dropdown-c">
+                <a href="#" class="logged-user" data-toggle="dropdown">
+                  <img src="http://via.placeholder.com/500x500" alt="">
+                  <span>Nombre Usuario</span>
+                  <i class="fa fa-angle-down"></i>
+                </a>
+                <div class="dropdown-menu dropdown-menu-right">
+                  <nav class="nav">
+                    <a href="profile.html" class="nav-link"><i class="icon ion-person"></i> View Profile</a>
+                    <a href="page-edit-profile.html" class="nav-link"><i class="icon ion-compose"></i> Edit Profile</a>
+                    <a href="login.html" class="nav-link"><i class="icon ion-forward"></i> Sign Out</a>
+                  </nav>
+                </div><!-- dropdown-menu -->
+              </div><!-- dropdown -->
+            </div><!-- header-right -->
+          </div><!-- container -->
+        </div><!-- slim-header -->
+    
+        <div class="slim-navbar">
+          <div class="container">
+            <ul class="nav">
+              <!--Admin-->
+              <li class="nav-item">
+                <a class="nav-link" href="widgets.html">
+                  <i class="icon ion-ios-home-outline"></i>
+                  <span>Inicio</span>
+                </a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="widgets.html">
+                  <i class="icon ion-person-stalker"></i>
+                  <span>Usuarios</span>
+                </a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="widgets.html">
+                  <i class="icon ion-ios-book-outline"></i>
+                  <span>Actividades</span>
+                </a>
+              </li>
+              <!--Usuarios-->
+              <li class="nav-item">
+                <a class="nav-link" href="widgets.html">
+                  <i class="icon ion-ios-analytics-outline"></i>
+                  <span>Mi perfil</span>
+                </a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="widgets.html">
+                  <i class="icon ion-ios-analytics-outline"></i>
+                  <span>Nueva actividad</span>
+                </a>
+              </li>
+              
+              
+              
+              
+            </ul>
+          </div><!-- container -->
+        </div><!-- slim-navbar -->
+
+    <div class="slim-mainpanel">
+      <div class="container">
+        <div class="slim-pageheader">
+          <ol class="breadcrumb slim-breadcrumb">
+            <li class="breadcrumb-item"><a href="#">Inicio</a></li>
+            <li class="breadcrumb-item"><a href="#">Actividades</a></li>
+            <li class="breadcrumb-item active" aria-current="page">Nueva</li>
+          </ol>
+          <h6 class="slim-pagetitle">Crea una actividad</h6>
+        </div><!-- slim-pageheader -->
+
+        <div class="section-wrapper">
+          <label class="section-title">Información general</label>
+          <p class="mg-b-20 mg-sm-b-40">Ingresa la información general de tu aplicación.</p>
+
+          <div class="row">
+            <div class="col-lg">
+              <input class="form-control" placeholder="Ingresa el nombre de la actividad" type="text">
+            </div><!-- col -->
+          </div><!-- row -->
+
+          <div class="row mg-t-20">
+            <div class="col-lg">
+              <textarea  class="form-control" placeholder="Ingresa las instrucciones de tu actividad"></textarea>
+            </div><!-- col -->
+          </div><!-- row -->
+        </div><!-- section-wrapper -->
+
+        <div class="section-wrapper mg-t-20" id="preguntas-c">
+          <label class="section-title">Ingresa las preguntas</label>
+          <p class="mg-b-20 mg-sm-b-40">Ingresa los campos de tu actividad.</p>
+          <a  onclick="addq()" style="cursor: pointer;">+ Agregar pregunta</a><br><br>
+
+          <div class="row pregunta">
+            <div class="col-lg">
+              <input class="form-control" placeholder="Ingresa una pregunta" type="text">
+            </div><!-- col -->
+          </div><!-- row -->
+
+        </div><!-- section-wrapper -->
+        <br><br>
+        <button class="btn btn-primary btn-block mg-b-10" type="submit">Crear actividad</button>
+        <script>
+            function addq(){
+              var container = document.createElement('div');
+              container.className = 'row pregunta';
+              container.innerHTML = '<div class="col-lg"><input class="form-control" placeholder="Ingresa una pregunta" type="text"></div><!-- col -->';
+              document.querySelector("#preguntas-c").append(container);
+              var preguntasHTML = document.querySelectorAll(".pregunta input");
+              var preguntasArray = [];
+              for(var i=0; i < preguntasHTML.length; i++){
+                preguntasArray[i] = preguntasHTML[i].value;
+              }
+              console.log(preguntasArray);
+            }
+        </script>
+
+
+      </div><!-- container -->
+    </div><!-- slim-mainpanel -->
+
+    <script src="../lib/jquery/js/jquery.js"></script>
+    <script src="../lib/popper.js/js/popper.js"></script>
+    <script src="../lib/bootstrap/js/bootstrap.js"></script>
+    <script src="../lib/jquery.cookie/js/jquery.cookie.js"></script>
+    <script src="../lib/jquery-toggles/js/toggles.min.js"></script>
+    <script src="../lib/jt.timepicker/js/jquery.timepicker.js"></script>
+    <script src="../lib/spectrum/js/spectrum.js"></script>
+    <script src="../lib/jquery.maskedinput/js/jquery.maskedinput.js"></script>
+    <script src="../lib/bootstrap-tagsinput/js/bootstrap-tagsinput.js"></script>
+
+    <script src="../js/slim.js"></script>
+    <script>
+      $(function(){
+        'use strict'
+
+        // Toggles
+        $('.toggle').toggles({
+          on: true,
+          height: 26
+        });
+
+        // Input Masks
+        $('#dateMask').mask('99/99/9999');
+        $('#phoneMask').mask('(999) 999-9999');
+        $('#ssnMask').mask('999-99-9999');
+
+        // Time Picker
+        $('#tpBasic').timepicker();
+        $('#tp2').timepicker({'scrollDefault': 'now'});
+        $('#tp3').timepicker();
+
+        $('#setTimeButton').on('click', function (){
+          $('#tp3').timepicker('setTime', new Date());
+        });
+
+        // Color picker
+        $('#colorpicker').spectrum({
+          color: '#17A2B8'
+        });
+
+        $('#showAlpha').spectrum({
+          color: 'rgba(23,162,184,0.5)',
+          showAlpha: true
+        });
+
+        $('#showPaletteOnly').spectrum({
+            showPaletteOnly: true,
+            showPalette:true,
+            color: '#DC3545',
+            palette: [
+                ['#1D2939', '#fff', '#0866C6','#23BF08', '#F49917'],
+                ['#DC3545', '#17A2B8', '#6610F2', '#fa1e81', '#72e7a6']
+            ]
+        });
+
+      });
+    </script>
+  </body>
+</html>

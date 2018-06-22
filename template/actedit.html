@@ -600,21 +600,24 @@
             document.querySelector("#instructions-c"+id).append(container);
 
           }
-        var qc = 0;
+        var qct = 0;
         function addq(id){
+
           var container = document.createElement('div');
           container.className = 'med pregunta';
-          qc++;
-          selformq = selform.cloneNode(true);
+          qct++;
+          qc = qct+0;
+          
+          var selformq = "<select class='form-control' id='selform"+qc+"' onchange='selformf("+qc+")'>"+selform.cloneNode(true).innerHTML+"</select>";
+
           selformq.id+=qc;
-          container.appendChild(selformq);
-          container.innerHTML+='<div id="formatview'+qc+'"></div>';
-          container.querySelector("select").addEventListener("change",function(){console.log("selformq");selformf(qc)});
-          
-          
+          container.innerHTML+=selformq+'<div id="formatview'+qc+'"></div>';
+          //selformq.onchange="selformf("+qc+")";
+          //selformq.addEventListener("change",function(){console.log("in",qc);selformf(qc)});
+          //console.log( document.querySelector('#formatview'+qc));
+          //container.insertAdjacentElement('afterbegin',selformq);
           
           document.querySelector("#preguntas-c"+id).append(container);
-          console.log(qc)
 
         }
       </script>

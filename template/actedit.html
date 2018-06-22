@@ -523,14 +523,21 @@
   
               return questype;
           }
-          function selformf(id){
+          function selformf(id,qw){
             console.log("self");
               var format = clone(questype);
               format.shortansw.id+=id;
+              format.shortansw.querySelector("input").name+="qww"+qw;
               format.largeansw.id +=id;
+              format.largeansw.querySelector("input").name+="qww"+qw;
               format.multop.id += id;
+              format.multop.querySelectorAll("input")[0].name+="qww"+qw;
               format.imgord.id += id;
+              format.imgord.querySelectorAll("input")[0].name+="qww"+qw;
+              format.imgord.querySelectorAll("input")[1].name+="qwi"+qw;
               format.imgdesc.id += id;
+              format.imgdesc.querySelectorAll("input")[0].name+="qww"+qw;
+              format.imgdesc.querySelectorAll("input")[1].name+="qwi"+qw;
               
               
               var select = parseInt(document.querySelector("select#selform"+id).value);
@@ -612,7 +619,7 @@
           qct++;
           qc = qct+0;
           
-          var selformq = "<select class='form-control' name='qw-"+id+"-"+qwcont+"' id='selform"+qc+"' onchange='selformf("+qc+")'>"+selform.cloneNode(true).innerHTML+"</select>";
+          var selformq = "<select class='form-control' name='qw-"+id+"-"+qwcont+"' id='selform"+qc+"' onchange='selformf("+qc+",\""+id+"-"+qwcont+"\")'>"+selform.cloneNode(true).innerHTML+"</select>";
 
           selformq.id+=qc;
           container.innerHTML+=selformq+'<div id="formatview'+qc+'"></div>';

@@ -1,0 +1,622 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Twitter -->
+    <meta name="twitter:site" content="@themepixels">
+    <meta name="twitter:creator" content="@themepixels">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Slim">
+    <meta name="twitter:description" content="Premium Quality and Responsive UI for Dashboard.">
+    <meta name="twitter:image" content="http://themepixels.me/slim/img/slim-social.png">
+
+    <!-- Facebook -->
+    <meta property="og:url" content="http://themepixels.me/slim">
+    <meta property="og:title" content="Slim">
+    <meta property="og:description" content="Premium Quality and Responsive UI for Dashboard.">
+
+    <meta property="og:image" content="http://themepixels.me/slim/img/slim-social.png">
+    <meta property="og:image:secure_url" content="http://themepixels.me/slim/img/slim-social.png">
+    <meta property="og:image:type" content="image/png">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="600">
+
+    <!-- Meta -->
+    <meta name="description" content="Premium Quality and Responsive UI for Dashboard.">
+    <meta name="author" content="ThemePixels">
+
+    <title>Slim Responsive Bootstrap 4 Admin Template</title>
+
+    <!-- vendor css -->
+    <link href="../lib/font-awesome/css/font-awesome.css" rel="stylesheet">
+    <link href="../lib/Ionicons/css/ionicons.css" rel="stylesheet">
+
+    <!-- Slim CSS -->
+    <link rel="stylesheet" href="../css/slim.css">
+
+  </head>
+  <body>
+    <style>
+      .pregunta{padding: 1rem ;border:1px solid gray;margin-bottom:1rem;}
+
+    </style>
+
+    <div class="slim-header">
+      <div class="container">
+        <div class="slim-header-left">
+          <h2 class="slim-logo"><a href="index.html">slim<span>.</span></a></h2>
+
+        </div><!-- slim-header-left -->
+        <div class="slim-header-right">
+          <div class="dropdown dropdown-c">
+            <a href="#" class="logged-user" data-toggle="dropdown">
+              <img src="http://via.placeholder.com/500x500" alt="">
+              <span>Nombre Usuario</span>
+              <i class="fa fa-angle-down"></i>
+            </a>
+            <div class="dropdown-menu dropdown-menu-right">
+              <nav class="nav">
+                <a href="page-profile.html" class="nav-link"><i class="icon ion-person"></i> View Profile</a>
+                <a href="page-edit-profile.html" class="nav-link"><i class="icon ion-compose"></i> Edit Profile</a>
+                <a href="page-signin.html" class="nav-link"><i class="icon ion-forward"></i> Sign Out</a>
+              </nav>
+            </div><!-- dropdown-menu -->
+          </div><!-- dropdown -->
+        </div><!-- header-right -->
+      </div><!-- container -->
+    </div><!-- slim-header -->
+
+    <div class="slim-navbar">
+        <div class="container">
+          <ul class="nav">
+            <!--Admin-->
+            <li class="nav-item">
+              <a class="nav-link" href="timeline.html">
+                <i class="icon ion-ios-home-outline"></i>
+                <span>Inicio</span>
+              </a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="users.html">
+                <i class="icon ion-person-stalker"></i>
+                <span>Usuarios</span>
+              </a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="activities.html">
+                <i class="icon ion-ios-book-outline"></i>
+                <span>Actividades</span>
+              </a>
+            </li>
+            <!--Usuarios-->
+            <li class="nav-item">
+              <a class="nav-link" href="profile.html">
+                <i class="icon ion-ios-analytics-outline"></i>
+                <span>Mi perfil</span>
+              </a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="newActivity.html">
+                <i class="icon ion-ios-analytics-outline"></i>
+                <span>Nueva actividad</span>
+              </a>
+            </li>
+            
+            
+            
+            
+          </ul>
+        </div><!-- container -->
+      </div><!-- slim-navbar -->
+
+    <div class="slim-mainpanel">
+      <div class="container">
+        <div class="slim-pageheader">
+          <ol class="breadcrumb slim-breadcrumb">
+            <li class="breadcrumb-item"><a href="#">Inicio</a></li>
+            <li class="breadcrumb-item"><a href="#">Usuario</a></li>
+            <li class="breadcrumb-item active" aria-current="page">Actividad</li>
+          </ol>
+          <h6 class="slim-pagetitle">Crea una actividad</h6>
+        </div><!-- slim-pageheader -->
+        
+        <div class="row row-sm">
+          <div class="col-lg-12">
+            <div class="card card-profile">
+              <div class="card-body">
+                <div class="media">
+                  
+                  <div class="media-body">
+                    <h3 class="card-profile-name"><input class="form-control" value="El cuento…un camino para afrontar la vida" placeholder="Titulo de la actividad"></h3>
+                    <p class="card-profile-position" style="line-height: 1;">
+                        <input class="form-control" value="Paz Baeza Bischoffshausen" placeholder="Autor">
+                        <input class="form-control" value="Profesora de Didáctica de la Lengua" placeholder="Titulo profesional"></p>
+                    <br>
+                    <p class="mg-b-0">
+                      <textarea name="" class="form-control"  id="" cols="30" rows="10">El cuento acercará al niño a la lectura. Un niño que se haya aficionado desde pequeño a los cuentos tendrá un mayor interés por descifrar lo que dicen los libros. Del entusiasmo que coloquen los educadores por introducir a sus estudiantes en el mundo de los cuentos, nacerá su amor por la literatura.</textarea>
+                    </p>
+                    <label><br>
+                      Selecciona el video<br>
+                      <input type="file" id="archivos" >
+                    </label>
+                    <style>
+                      .mediaa{
+                        text-align:center;
+                        display:flex;
+                        justify-content: space-around;
+                        flex-wrap: wrap;
+                        align-items: flex-end;
+                        padding-top:2rem;
+                      }
+                      .media-cont{
+                        margin: 1rem;
+                      }
+                      .mediaa video, .mediaa img, .mediaa audio, .media-cont{
+                        display:inline-block;
+                        width: 250px;
+                        border-radius:0;
+                        margin-bottom:1rem;
+                      }
+                    </style>
+                    
+                        
+
+                  </div><!-- media-body -->
+                </div><!-- media -->
+              </div><!-- card-body -->
+              
+            </div><!-- card -->
+            <br>
+            <div class="ht-md-60 pd-x-20 bg-dark d-flex align-items-center justify-content-center">
+              <ul class="nav nav-underline-dark align-items-center flex-column flex-md-row" role="tablist" id="tabsnav">
+                <li class="nav-item"><a class="nav-link active" data-toggle="tab" href="#" onclick="getTab(0)" role="tab">Todas</a></li>
+                <li class="nav-item"><a class="nav-link" data-toggle="tab" href="#" role="tab" onclick="getTab(1)">1° y 2°</a></li>
+                <li class="nav-item"><a class="nav-link" data-toggle="tab" href="#" role="tab" onclick="getTab(2)">3° y 4°</a></li>
+                <li class="nav-item"><a class="nav-link" data-toggle="tab" href="#" role="tab" onclick="getTab(3)">5° y 6°</a></li>
+              </ul>
+            </div>
+            
+
+            <!--<ul class="nav nav-activity-profile mg-t-20">
+              <li class="nav-item"><a href="" class="nav-link"><i class="icon ion-ios-redo tx-purple"></i> Share an update</a></li>
+              <li class="nav-item"><a href="" class="nav-link"><i class="icon ion-image tx-primary"></i> Publish photo</a></li>
+              <li class="nav-item"><a href="" class="nav-link"><i class="icon ion-document-text tx-success"></i> Add an article</a></li>
+            </ul><!-- nav -->
+            <div class="card card-experience mg-t-20 info-id" id="info-1">
+                <div class="card-body">
+                  <div class="slim-card-title">1° y 2° básico</div>
+  
+                  <br>
+                  <h3 style="color:#2b2b2b">Actividades</h3>
+                  <p><textarea class="form-control" placeholder="Descripcion de la actividad"></textarea></p>
+                  
+                  <a  onclick="addli(1)" style="cursor: pointer;">+ Agregar instrucción</a><br><br>
+  
+                  <ul id="instructions-c1">
+                    <li class="instruction"><input class="form-control" placeholder="Ingresa una instrucción" type="text"></li>
+                    
+                  </ul>
+                  
+                  <label><br>
+                    Selecciona el audio<br>
+                    <input type="file" id="archivos">
+                  </label>  
+                   
+                </div><!-- card-body -->
+  
+                
+  
+                <div class="card-footer">
+                  
+                </div><!-- card-footer -->
+              </div><!-- card -->
+
+              <div class="card card-experience mg-t-20 info-id" id="info-2">
+                  <div class="card-body">
+                    <div class="slim-card-title">3° y 4° básico</div>
+    
+                    <br>
+                    <h3 style="color:#2b2b2b">Actividades</h3>
+                    <p><textarea class="form-control" placeholder="Descripcion de la actividad"></textarea></p>
+                    
+                    <a  onclick="addli(2)" style="cursor: pointer;">+ Agregar instrucción</a><br><br>
+    
+                    <ul id="instructions-c2">
+                      <li class="instruction"><input class="form-control" placeholder="Ingresa una instrucción" type="text"></li>
+                      
+                    </ul>
+                    
+                    <label><br>
+                      Selecciona el audio<br>
+                      <input type="file" id="archivos">
+                    </label>  
+                     
+                  </div><!-- card-body -->
+    
+                  
+    
+                  <div class="card-footer">
+                    
+                  </div><!-- card-footer -->
+                </div><!-- card -->
+
+              <div class="card card-experience mg-t-20 info-id" id="info-3">
+                  <div class="card-body">
+                    <div class="slim-card-title">5° y 6° básico</div>
+    
+                    <br>
+                    <h3 style="color:#2b2b2b">Actividades</h3>
+                    <p><textarea class="form-control" placeholder="Descripcion de la actividad"></textarea></p>
+                    
+                    <a  onclick="addli(3)" style="cursor: pointer;">+ Agregar instrucción</a><br><br>
+    
+                    <ul id="instructions-c3">
+                      <li class="instruction"><input class="form-control" placeholder="Ingresa una instrucción" type="text"></li>
+                      
+                    </ul>
+                    
+                    <label><br>
+                      Selecciona el audio<br>
+                      <input type="file" id="archivos">
+                    </label>  
+                     
+                  </div><!-- card-body -->
+    
+                  
+    
+                  <div class="card-footer">
+                    
+                  </div><!-- card-footer -->
+                </div><!-- card -->
+
+
+              <!-- ESTAS SE ELMINAN EN LA EJECUCION DEL PROGRAMA, NO TOMAR EN CUENTA-->
+              <div>
+                  <select class="form-control" id="selform" >
+                      <option value="">-Seleccione el formato de pregunta-</option>
+                      <option value="1">Respuesta corta</option>
+                      <option value="2">Respuesta larga</option>
+                      <option value="3">Ordenamiento de imagenes</option>
+                      <option value="4">Descripción de imagenes</option>
+                  </select>
+                  <div id="formatview">
+              
+                  </div>
+              
+                  <div id="formats">
+                      <div class="format" id="shortansw">
+                          <input type="text" class="form-control" placeholder="Ingrese la pregunta">
+                      </div>
+                      <div class="format" id="largeansw">
+                          <input type="text" class="form-control" placeholder="Ingrese la pregunta">
+                      </div>
+                      <div class="format" id="multop">
+                          <input type="text" class="form-control" placeholder="Ingrese la pregunta">
+                          <br>
+                          <a  onclick="addop(0)" style="cursor: pointer;">+ Agregar opción</a>
+              
+                          <div class="row opcion">
+                              <div class="col-lg">
+                                  <input class="form-control" placeholder="Ingresa una opción" type="text">
+                              </div><!-- col -->
+                          </div><!-- row -->
+                      </div>
+                      <div class="format" id="imgord">
+                          <input type="text" class="form-control" placeholder="Ingrese la pregunta">
+                          <br>
+              
+                          <div class="row imgord">
+                              <div class="col-lg">
+                                  <label><br>
+                                      Selecciona las imagenes a ordenar<br>
+                                      <input type="file" multiple="">
+                                  </label>
+                              </div><!-- col -->
+                          </div><!-- row -->
+                      </div>
+                      <div class="format" id="imgdesc">
+                          <input type="text" class="form-control" placeholder="Ingrese la pregunta">
+                              <br>
+                  
+                              <div class="row imgord">
+                                  <div class="col-lg">
+                                      <label><br>
+                                          Selecciona las imagenes a describir<br>
+                                          <input type="file" multiple="">
+                                      </label>
+                                  </div><!-- col -->
+                              </div><!-- row -->
+                          </div>
+                      </div>
+                  </div><!-- END: ESTAS SE ELMINAN EN LA EJECUCION DEL PROGRAMA, NO TOMAR EN CUENTA-->
+              </div>
+            </div>
+            <div class="card card-experience mg-t-20 act-id" id="act-1">
+              <div class="card-body">
+                <div class="slim-card-title">Lenguaje / 1° y 2° básico
+                </div><br>
+                <div class="row col-lg-12">
+                  <div class="col-lg-10"> 
+                    <h3 style="color:#2b2b2b"><input type="text" class="form-control" placeholder="Escribe el titulo del cuento"></h3>
+                    <h4><input type="text" class="form-control" placeholder="Escribe el autor del cuento"></h4>
+                  </div>
+                  <div class="col-lg-2">
+                    ingrese una imagen aluciva al cuento 
+                    <input type="file" style="width:100%;">
+                  </div>
+                </div>
+                <div class="row col-lg-12"><h5 style="color:#2b2b2b">Agrega las preguntas de la actividad:</h5></div>
+                <a  onclick="addq(1)" style="cursor: pointer;">+ Agregar pregunta</a><br><br>
+                <div id="preguntas-c1">
+
+                    <div class="med pregunta">
+
+                        <select class="form-control" id="selform0" onchange="selformf(0)">
+                            <option value="">-Seleccione el formato de pregunta-</option>
+                            <option value="1">Respuesta corta</option>
+                            <option value="2">Respuesta larga</option>
+                            <option value="3">Opción multiple</option>
+                            <option value="4">Ordenamiento de imagenes</option>
+                            <option value="5">Descripción de imagenes</option>
+                        </select>
+                        <div id="formatview0">
+                    
+                        </div>
+  
+                  </div><!-- media -->
+
+                
+
+              </div><!-- card-body -->
+              <div class="card-footer">
+                
+              </div><!-- card-footer -->
+            </div><!-- card --></div>
+            <div class="card card-experience mg-t-20 act-id" id="act-2">
+                <div class="card-body">
+                  <div class="slim-card-title">Lenguaje / 3° y 4° básico
+                  </div><br>
+                  <div class="row col-lg-12">
+                    <div class="col-lg-10"> 
+                      <h3 style="color:#2b2b2b"><input type="text" class="form-control" placeholder="Escribe el titulo del cuento"></h3>
+                      <h4><input type="text" class="form-control" placeholder="Escribe el autor del cuento"></h4>
+                    </div>
+                    <div class="col-lg-2">
+                      ingrese una imagen aluciva al cuento 
+                      <input type="file" style="width:100%;">
+                    </div>
+                  </div>
+                  <div class="row col-lg-12"><h5 style="color:#2b2b2b">Agrega las preguntas de la actividad:</h5></div>
+                  <a  onclick="addq(2)" style="cursor: pointer;">+ Agregar pregunta</a><br><br>
+                  <div id="preguntas-c2">
+  
+                      
+  
+                  </div>
+                  
+  
+                </div><!-- card-body -->
+                <div class="card-footer">
+                  
+                </div><!-- card-footer -->
+            </div><!-- card -->
+            <div class="card card-experience mg-t-20 act-id" id="act-3">
+              <div class="card-body">
+                <div class="slim-card-title">Lenguaje / 5° y 6° básico
+                </div><br>
+                <div class="row col-lg-12">
+                  <div class="col-lg-10"> 
+                    <h3 style="color:#2b2b2b"><input type="text" class="form-control" placeholder="Escribe el titulo del cuento"></h3>
+                    <h4><input type="text" class="form-control" placeholder="Escribe el autor del cuento"></h4>
+                  </div>
+                  <div class="col-lg-2">
+                    ingrese una imagen aluciva al cuento 
+                    <input type="file" style="width:100%;">
+                  </div>
+                </div>
+                <div class="row col-lg-12"><h5 style="color:#2b2b2b">Agrega las preguntas de la actividad:</h5></div>
+                <a  onclick="addq(3)" style="cursor: pointer;">+ Agregar pregunta</a><br><br>
+                <div id="preguntas-c3">
+
+
+
+                </div>
+                
+
+              </div><!-- card-body -->
+              <div class="card-footer">
+                
+              </div><!-- card-footer -->
+            </div><!-- card -->
+            <br><br>
+            <button class="btn btn-primary btn-block mg-b-10" >Terminar actividad</button>
+          </div><!-- col-8 -->
+
+          
+        </div><!-- row -->
+
+      </div><!-- container -->
+    </div><!-- slim-mainpanel -->
+
+    <script src="../lib/jquery/js/jquery.js"></script>
+    <script src="../lib/popper.js/js/popper.js"></script>
+    <script src="../lib/bootstrap/js/bootstrap.js"></script>
+    <script src="../lib/jquery.cookie/js/jquery.cookie.js"></script>
+
+    <script src="../js/slim.js"></script>
+    <script>
+        function getTab(li){
+          tabActive(li);
+          
+          if(li == 0){
+            showAll();
+          }else{
+            hiddenAll();
+            document.querySelector("#info-"+li).style="";
+            document.querySelector("#act-"+li).style="";
+          }
+        }
+        function tabActive(li){
+          var tabs = document.querySelectorAll("#tabsnav li a");
+          for(var i = 0; i < tabs.length; i++){
+            tabs[i].className="nav-link";
+          }
+          tabs[li].className="nav-link active";
+        }
+        function hiddenAll(){
+          var infos = document.querySelectorAll(".info-id");
+          var acts = document.querySelectorAll(".act-id");
+          for(var i = 0; i < infos.length; i++){
+            infos[i].style="display:none;";
+            acts[i].style="display:none;";
+          }
+        }
+        function showAll(){
+          var infos = document.querySelectorAll(".info-id");
+          var acts = document.querySelectorAll(".act-id");
+          for(var i = 0; i < infos.length; i++){
+            infos[i].style="";
+            acts[i].style="";
+          }
+        }
+
+    </script>
+    <script>
+       
+        
+    </script>
+       <script>
+          var questype = create_questype();
+          var selform = create_selform();
+          console.log(questype);
+          function addop(ques){
+              var container = document.createElement('div');
+              container.className = 'row opcion';
+              container.innerHTML = '<div class="col-lg"><input class="form-control" placeholder="Ingresa una opcion" type="text"></div><!-- col -->';
+              document.querySelector("#multop"+ques).append(container);
+  
+          }
+          function create_selform(){
+            console.log(document.querySelector("#selform"))
+              var selform = document.querySelector("#selform").cloneNode(true);
+              document.querySelector("#selform").outerHTML = "";
+              
+              return selform;
+          }
+          function create_questype(id){
+              var questype = {};
+              questype.shortansw = document.querySelector("#shortansw").cloneNode(true);
+              
+              questype.largeansw = document.querySelector("#largeansw").cloneNode(true);
+              
+              questype.multop = document.querySelector("#multop").cloneNode(true);
+              
+              questype.imgord = document.querySelector("#imgord").cloneNode(true);
+              
+              questype.imgdesc = document.querySelector("#imgdesc").cloneNode(true);
+              
+  
+              document.querySelector("#formats").outerHTML ="";
+  
+              return questype;
+          }
+          function selformf(id){
+            console.log("self");
+              var format = clone(questype);
+              format.shortansw.id+=id;
+              format.largeansw.id +=id;
+              format.multop.id += id;
+              format.imgord.id += id;
+              format.imgdesc.id += id;
+              
+              
+              var select = parseInt(document.querySelector("select#selform"+id).value);
+              
+              var formt;
+              switch(select){
+                  case 1: 
+                      formt = format.shortansw.outerHTML;
+                      console.log(format.shortansw.outerHTML);
+                  break;
+                  case 2: 
+                      formt = format.largeansw.outerHTML;
+                      console.log(format.largeansw.outerHTML);
+                  break;
+
+                  case 3: 
+                      formt = format.imgord.outerHTML;
+                      console.log(format.imgord.outerHTML);
+                  break;
+                  case 4: 
+                      formt = format.imgdesc.outerHTML;
+                      console.log(format.imgdesc.outerHTML);
+                  break;
+              }
+              console.log(id)
+              document.querySelector("#formatview"+id).innerHTML = formt;
+  
+          }
+          function clone(obj) {
+              console.log(typeof(obj));
+              var copy;
+  
+              // Handle the 3 simple types, and null or undefined
+              if (null == obj || "object" != typeof obj) return obj;
+  
+              // Handle Date
+              if (obj instanceof Date) {
+                  copy = new Date();
+                  copy.setTime(obj.getTime());
+                  return copy;
+              }
+  
+              // Handle Array
+              if (obj instanceof Array) {
+                  copy = [];
+                  for (var i = 0, len = obj.length; i < len; i++) {
+                      copy[i] = clone(obj[i]);
+                  }
+                  return copy;
+              }
+  
+              // Handle Object
+              if (obj instanceof Object) {
+                  copy = {};
+                  for (var attr in obj) {
+                      copy[attr] = obj[attr].cloneNode(true);
+                  }
+                  return copy;
+              }
+  
+              throw new Error("Unable to copy obj! Its type isn't supported.");
+          }
+          function addli(id){
+            var container = document.createElement('li');
+            container.className = 'instruction';
+            container.innerHTML = '<input class="form-control" placeholder="Ingresa una instrucción" type="text">';
+            document.querySelector("#instructions-c"+id).append(container);
+
+          }
+        var qc = 0;
+        function addq(id){
+          var container = document.createElement('div');
+          container.className = 'med pregunta';
+          qc++;
+          selformq = selform.cloneNode(true);
+          selformq.id+=qc;
+          container.appendChild(selformq);
+          container.innerHTML+='<div id="formatview'+qc+'"></div>';
+          container.querySelector("select").addEventListener("change",function(){console.log("selformq");selformf(qc)});
+          
+          
+          
+          document.querySelector("#preguntas-c"+id).append(container);
+          console.log(qc)
+
+        }
+      </script>
+  </body>
+</html>

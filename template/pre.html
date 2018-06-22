@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<style>
+    .format{
+        border: 1px solid black;
+        padding: 1rem;
+        margin:1rem;
+    }
+</style>
+<body>
+    <select class="form-control" id="selform0" onchange="selform(0)">
+        <option value="">-Seleccione el formato de pregunta-</option>
+        <option value="1">Respuesta corta</option>
+        <option value="2">Respuesta larga</option>
+        <option value="3">Opción multiple</option>
+        <option value="4">Ordenamiento de imagenes</option>
+        <option value="5">Descripción de imagenes</option>
+    </select>
+    <div id="formatview0">
+
+    </div>
+
+    <div id="formats">
+        <div class="format" id="shortansw">
+            <input type="text" class="form-control" placeholder="Ingrese la pregunta">
+        </div>
+        <div class="format" id="largeansw">
+            <input type="text" class="form-control" placeholder="Ingrese la pregunta">
+        </div>
+        <div class="format" id="multop">
+            <input type="text" class="form-control" placeholder="Ingrese la pregunta">
+            <br>
+            <a  onclick="addop(0)" style="cursor: pointer;">+ Agregar opción</a>
+
+            <div class="row opcion">
+                <div class="col-lg">
+                    <input class="form-control" placeholder="Ingresa una opción" type="text">
+                </div><!-- col -->
+            </div><!-- row -->
+        </div>
+        <div class="format" id="imgord">
+            <input type="text" class="form-control" placeholder="Ingrese la pregunta">
+            <br>
+
+            <div class="row imgord">
+                <div class="col-lg">
+                    <label><br>
+                        Selecciona las imagenes a ordenar<br>
+                        <input type="file" multiple="">
+                    </label>
+                </div><!-- col -->
+            </div><!-- row -->
+        </div>
+        <div class="format" id="imgdesc">
+            <input type="text" class="form-control" placeholder="Ingrese la pregunta">
+                <br>
+    
+                <div class="row imgord">
+                    <div class="col-lg">
+                        <label><br>
+                            Selecciona las imagenes a describir<br>
+                            <input type="file" multiple="">
+                        </label>
+                    </div><!-- col -->
+                </div><!-- row -->
+            </div>
+        </div>
+    </div>
+
+    <script>
+        var questype = create_questype();
+        console.log(questype);
+        function addop(ques){
+            var container = document.createElement('div');
+            container.className = 'row opcion';
+            container.innerHTML = '<div class="col-lg"><input class="form-control" placeholder="Ingresa una opcion" type="text"></div><!-- col -->';
+            document.querySelector("#multop"+ques).append(container);
+
+        }
+        function create_selform(id){
+            var selform = document.querySelector("#selform").cloneNode(true);
+            document.querySelector("#selform").outerHTML = "";
+            selform.id+=id;
+            selform.onchange ="selform("+id+")";
+            return selform;
+        }
+        function create_questype(id){
+            var questype = {};
+            questype.shortansw = document.querySelector("#shortansw").cloneNode(true);
+            
+            questype.largeansw = document.querySelector("#largeansw").cloneNode(true);
+            
+            questype.multop = document.querySelector("#multop").cloneNode(true);
+            
+            questype.imgord = document.querySelector("#imgord").cloneNode(true);
+            
+            questype.imgdesc = document.querySelector("#imgdesc").cloneNode(true);
+            
+
+            document.querySelector("#formats").outerHTML ="";
+
+            return questype;
+        }
+        function selform(id){
+            var format = clone(questype);
+            format.shortansw.id+=id;
+            format.largeansw.id +=id;
+            format.multop.id += id;
+            format.imgord.id += id;
+            format.imgdesc.id += id;
+            
+            
+            var select = parseInt(document.querySelector("select#selform"+id).value);
+            
+            var formt;
+            switch(select){
+                case 1: 
+                    formt = format.shortansw.outerHTML;
+                    console.log(format.shortansw.outerHTML);
+                break;
+                case 2: 
+                    formt = format.largeansw.outerHTML;
+                    console.log(format.largeansw.outerHTML);
+                break;
+                case 3: 
+                    formt = format.multop.outerHTML;
+                    console.log(format.multop.outerHTML);
+                break;
+                case 4: 
+                    formt = format.imgord.outerHTML;
+                    console.log(format.imgord.outerHTML);
+                break;
+                case 5: 
+                    formt = format.imgdesc.outerHTML;
+                    console.log(format.imgdesc.outerHTML);
+                break;
+            }
+
+            document.querySelector("#formatview"+id).innerHTML = formt;
+
+        }
+        function clone(obj) {
+            console.log(typeof(obj));
+            var copy;
+
+            // Handle the 3 simple types, and null or undefined
+            if (null == obj || "object" != typeof obj) return obj;
+
+            // Handle Date
+            if (obj instanceof Date) {
+                copy = new Date();
+                copy.setTime(obj.getTime());
+                return copy;
+            }
+
+            // Handle Array
+            if (obj instanceof Array) {
+                copy = [];
+                for (var i = 0, len = obj.length; i < len; i++) {
+                    copy[i] = clone(obj[i]);
+                }
+                return copy;
+            }
+
+            // Handle Object
+            if (obj instanceof Object) {
+                copy = {};
+                for (var attr in obj) {
+                    copy[attr] = obj[attr].cloneNode(true);
+                }
+                return copy;
+            }
+
+            throw new Error("Unable to copy obj! Its type isn't supported.");
+        }
+    </script>
+</body>
+</html>

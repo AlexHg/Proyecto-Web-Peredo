@@ -352,21 +352,7 @@
                 <a  onclick="addq(1)" style="cursor: pointer;">+ Agregar pregunta</a><br><br>
                 <div id="preguntas-c1">
 
-                    <div class="med pregunta">
-
-                        <select class="form-control" name="qw-1-0" id="selform0" onchange="selformf(0)">
-                            <option value="">-Seleccione el formato de pregunta-</option>
-                            <option value="1">Respuesta corta</option>
-                            <option value="2">Respuesta larga</option>
-                            <option value="3">Opción multiple</option>
-                            <option value="4">Ordenamiento de imagenes</option>
-                            <option value="5">Descripción de imagenes</option>
-                        </select>
-                        <div id="formatview0">
-                    
-                        </div>
-  
-                  </div><!-- media -->
+                    </div>
 
                 
 
@@ -374,7 +360,7 @@
               <div class="card-footer">
                 
               </div><!-- card-footer -->
-            </div><!-- card --></div>
+            </div><!-- card -->
             <div class="card card-experience mg-t-20 act-id" id="act-2">
                 <div class="card-body">
                   <div class="slim-card-title">Lenguaje / 3° y 4° básico
@@ -523,21 +509,21 @@
   
               return questype;
           }
-          function selformf(id,qw){
-            console.log("self");
+          function selformf(id,qw,i){
+            console.log(qw,"s");
               var format = clone(questype);
               format.shortansw.id+=id;
-              format.shortansw.querySelector("input").name+="qww"+qw;
+              format.shortansw.querySelector("input").name+="qww-"+qw+"-"+i;
               format.largeansw.id +=id;
-              format.largeansw.querySelector("input").name+="qww"+qw;
+              format.largeansw.querySelector("input").name+="qww-"+qw+"-"+i;
               format.multop.id += id;
-              format.multop.querySelectorAll("input")[0].name+="qww"+qw;
+              format.multop.querySelectorAll("input")[0].name+="qww-"+qw+"-"+i;
               format.imgord.id += id;
-              format.imgord.querySelectorAll("input")[0].name+="qww"+qw;
-              format.imgord.querySelectorAll("input")[1].name+="qwi"+qw;
+              format.imgord.querySelectorAll("input")[0].name+="qww-"+qw+"-"+i;
+              format.imgord.querySelectorAll("input")[1].name+="qwi-"+qw+"-"+i;
               format.imgdesc.id += id;
-              format.imgdesc.querySelectorAll("input")[0].name+="qww"+qw;
-              format.imgdesc.querySelectorAll("input")[1].name+="qwi"+qw;
+              format.imgdesc.querySelectorAll("input")[0].name+="qww-"+qw+"-"+i;
+              format.imgdesc.querySelectorAll("input")[1].name+="qwi-"+qw+"-"+i;
               
               
               var select = parseInt(document.querySelector("select#selform"+id).value);
@@ -562,7 +548,7 @@
                       console.log(format.imgdesc.outerHTML);
                   break;
               }
-              console.log(id)
+              //console.log(id)
               document.querySelector("#formatview"+id).innerHTML = formt;
   
           }
@@ -603,7 +589,7 @@
           
           function addli(id){
             var licont = document.querySelectorAll("#instructions-c"+id+" li").length;
-            console.log(licont);
+            if(licont == undefined) licont = 0;
             var container = document.createElement('li');
             container.className = 'instruction';
             container.innerHTML = '<input class="form-control" name="instr-'+id+'-'+licont+'" placeholder="Ingresa una instrucción" type="text">';
@@ -615,11 +601,12 @@
 
           var container = document.createElement('div');
           var qwcont = document.querySelectorAll("#preguntas-c"+id+" .pregunta").length;
+          if(qwcont == undefined) qwcont = 0;
           container.className = 'med pregunta';
           qct++;
           qc = qct+0;
-          
-          var selformq = "<select class='form-control' name='qw-"+id+"-"+qwcont+"' id='selform"+qc+"' onchange='selformf("+qc+",\""+id+"-"+qwcont+"\")'>"+selform.cloneNode(true).innerHTML+"</select>";
+          console.log(id+"-"+qwcont);
+          var selformq = "<select class='form-control' name='qw-"+id+"-"+qwcont+"' id='selform"+qc+"' onchange='selformf("+qc+","+id+","+qwcont+")'>"+selform.cloneNode(true).innerHTML+"</select>";
 
           selformq.id+=qc;
           container.innerHTML+=selformq+'<div id="formatview'+qc+'"></div>';

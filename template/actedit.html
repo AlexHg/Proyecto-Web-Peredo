@@ -196,7 +196,7 @@
                   <a  onclick="addli(1)" style="cursor: pointer;">+ Agregar instrucción</a><br><br>
   
                   <ul id="instructions-c1">
-                    <li class="instruction"><input class="form-control" placeholder="Ingresa una instrucción" type="text"></li>
+                    <li class="instruction"><input class="form-control" name="instr-1-0" placeholder="Ingresa una instrucción" type="text"></li>
                     
                   </ul>
                   
@@ -225,7 +225,7 @@
                     <a  onclick="addli(2)" style="cursor: pointer;">+ Agregar instrucción</a><br><br>
     
                     <ul id="instructions-c2">
-                      <li class="instruction"><input class="form-control" placeholder="Ingresa una instrucción" type="text"></li>
+                      <li class="instruction"><input name="instr-2-0" class="form-control" placeholder="Ingresa una instrucción" type="text"></li>
                       
                     </ul>
                     
@@ -254,7 +254,7 @@
                     <a  onclick="addli(3)" style="cursor: pointer;">+ Agregar instrucción</a><br><br>
     
                     <ul id="instructions-c3">
-                      <li class="instruction"><input class="form-control" placeholder="Ingresa una instrucción" type="text"></li>
+                      <li class="instruction"><input class="form-control" name="instr-3-0" placeholder="Ingresa una instrucción" type="text"></li>
                       
                     </ul>
                     
@@ -354,7 +354,7 @@
 
                     <div class="med pregunta">
 
-                        <select class="form-control" id="selform0" onchange="selformf(0)">
+                        <select class="form-control" name="qw-1-0" id="selform0" onchange="selformf(0)">
                             <option value="">-Seleccione el formato de pregunta-</option>
                             <option value="1">Respuesta corta</option>
                             <option value="2">Respuesta larga</option>
@@ -548,7 +548,7 @@
 
                   case 3: 
                       formt = format.imgord.outerHTML;
-                      console.log(format.imgord.outerHTML);
+                      console.log(format.imgord.outerHTML); 
                   break;
                   case 4: 
                       formt = format.imgdesc.outerHTML;
@@ -593,10 +593,13 @@
   
               throw new Error("Unable to copy obj! Its type isn't supported.");
           }
+          
           function addli(id){
+            var licont = document.querySelectorAll("#instructions-c"+id+" li").length;
+            console.log(licont);
             var container = document.createElement('li');
             container.className = 'instruction';
-            container.innerHTML = '<input class="form-control" placeholder="Ingresa una instrucción" type="text">';
+            container.innerHTML = '<input class="form-control" name="instr-'+id+'-'+licont+'" placeholder="Ingresa una instrucción" type="text">';
             document.querySelector("#instructions-c"+id).append(container);
 
           }
@@ -604,11 +607,12 @@
         function addq(id){
 
           var container = document.createElement('div');
+          var qwcont = document.querySelectorAll("#preguntas-c"+id+" .pregunta").length;
           container.className = 'med pregunta';
           qct++;
           qc = qct+0;
           
-          var selformq = "<select class='form-control' id='selform"+qc+"' onchange='selformf("+qc+")'>"+selform.cloneNode(true).innerHTML+"</select>";
+          var selformq = "<select class='form-control' name='qw-"+id+"-"+qwcont+"' id='selform"+qc+"' onchange='selformf("+qc+")'>"+selform.cloneNode(true).innerHTML+"</select>";
 
           selformq.id+=qc;
           container.innerHTML+=selformq+'<div id="formatview'+qc+'"></div>';
